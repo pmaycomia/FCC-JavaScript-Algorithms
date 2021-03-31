@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>FCC JavaScript Algorithms</title>
+</head>
+<body>
+    <h1>FCC JavaScript Algorithms</h1>
+    <h2>My Solutions:</h2>
+    <ul>
+        <li> <a href="#Basic"> Basic Algorithm Scripting </a> </li>
+        <li><a href="#Intermediate"> Intermediate Algorithm Scripting </a></li>
+        <li><a href="#Projects"> Algorithms and Data Structures Projects </a></li>
+    </ul>
+    <a id=Basic></a>
+    <div>
+        <h3>Basic Algorithm Scripting</h3>
+
+        <ol>
+            <li>Convert Celsius to Fahrenheit</li>            
+            <xmp>
+                function convertToF(celsius) {
+                    let fahrenheit = (celsius * 9 / 5) + 32;
+                    return fahrenheit;
+                }
+            </xmp>
+
+            <li>Reverse a String</li>
+            <xmp>
+                function reverseString(str) {
+                    let newStr = [];
+                    
+                    newStr = str.split("").reverse().join("");
+                    return newStr;
+                }                                  
+            </xmp>
+
+            <li>Factorialize a Number</li>
+            <xmp>
+                function factorialize(num) {
+                    if (num <= 0) {
+                        return 1;
+                    } 
+                    
+                    return num * factorialize(num - 1);
+                }
+            </xmp>
+
+            <li>Find the Longest Word in a String</li>
+            <xmp>
+                function findLongestWordLength(str) {
+                    let newArr = str.split(" ");
+                    
+                    console.log(newArr)
+                    return str.length;
+                  }
+            </xmp>
+
+        </ol>
+    </div>
+    <a id=Intermediate></a>
+    <div>
+        <h3>Intermediate Algorithm Scripting</h3>
+    </div>
+
+    <a id=Projects></a>
+    <div>
+        <h3>Algorithms and Data Structures Projects</h3>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
