@@ -53,12 +53,41 @@
             <xmp>
                 function findLongestWordLength(str) {
                     let newArr = str.split(" ");
-                    
-                    console.log(newArr)
-                    return str.length;
+                    let result = 0;
+                  
+                    for (let string of newArr) {
+                      if (string.length > result) {
+                        result = string.length;
+                      }                      
+                    };
+                  
+                    return result;
                   }
+                }                  
             </xmp>
 
+            <li>Return Largest Numbers in Arrays</li>
+            <xmp>   
+                function largestOfFour(arr) {
+                    let newArr = [];
+                   
+                    for (let arrays of arr) {    
+                      newArr.push(Math.max(...arrays))
+                    }
+                  
+                    return newArr;
+                }
+                  
+            </xmp>
+
+            <li>Confirm the Ending</li>
+            <xmp>
+                function confirmEnding(str, target) {
+                    return str;
+                  }
+                  
+                  confirmEnding("Bastian", "n");
+            </xmp>
         </ol>
     </div>
     <a id=Intermediate></a>
