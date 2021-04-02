@@ -76,19 +76,56 @@
                     }
                   
                     return newArr;
-                }
-                  
+                }                  
             </xmp>
 
             <li>Confirm the Ending</li>
             <xmp>
                 function confirmEnding(str, target) {
+                    if(str[str.length - 1] === target) {
+                        console.log("true");
+                        return true
+                      } else{
+                        return false
+                      }
+                  }                  
+            </xmp>
+            <b>//needs more work. targets > 1 char still haven't figured out</b>
+            <hr>
+
+            <li>Repeat a String Repeat a String</li>            
+            <xmp>
+                function repeatStringNumTimes(str, num) {
+
+                    let newStr = "";
+                    for (let i = 0; i < num; i++) {
+                      newStr = newStr.concat(str)
+                    }                    
+                    return(newStr)
+                }
+            </xmp>
+
+            <li>Truncate a StringPassed</li>
+            <xmp>
+                function truncateString(str, num) {
                     return str;
                   }
                   
-                  confirmEnding("Bastian", "n");
+                  truncateString("A-tisket a-tasket A green and yellow basket", 8);
+            </xmp>
+
+            <li></li>
+            <xmp>
+                
+            </xmp>
+
+            <li></li>
+            <xmp>
+                
             </xmp>
         </ol>
+
+        
     </div>
     <a id=Intermediate></a>
     <div>

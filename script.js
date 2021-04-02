@@ -47,6 +47,26 @@ function largestOfFour(arr) {
   
     return newArr;
 }
+
+function confirmEnding(str, target) {
+    if(str[str.length - 1] === target) {
+        console.log("true");
+        return true
+      } else {
+        return false
+      }
+}
+
+function repeatStringNumTimes(str, num) {
+
+    let newStr = "";
+    for (let i = 0; i < num; i++) {
+      newStr = newStr.concat(str)
+    }                    
+    return(newStr)
+}
+  
+
   
   
   
