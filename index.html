@@ -82,16 +82,11 @@
             <li>Confirm the Ending</li>
             <xmp>
                 function confirmEnding(str, target) {
-                    if(str[str.length - 1] === target) {
-                        console.log("true");
-                        return true
-                      } else{
-                        return false
-                      }
-                  }                  
+
+                    return str.slice(str.length - target.length) === target; 
+                }                 
             </xmp>
-            <b>//needs more work. targets > 1 char still haven't figured out</b>
-            <hr>
+            
 
             <li>Repeat a String Repeat a String</li>            
             <xmp>
@@ -108,10 +103,44 @@
             <li>Truncate a StringPassed</li>
             <xmp>
                 function truncateString(str, num) {
-                    return str;
-                  }
+                    return str.length > num ? str.slice(0, num) + "..." : str;
+                }                    
+            </xmp>
+
+            <li>Finders Keepers</li>
+            <xmp>
+                function findElement(arr, func) {
+                    let num = 0;
+                    let newArr = arr.map(func);
                   
-                  truncateString("A-tisket a-tasket A green and yellow basket", 8);
+                    return newArr[newArr.indexOf(true)];
+
+                
+            </xmp>
+
+            <li></li>
+            <xmp>
+                
+            </xmp>
+
+            <li></li>
+            <xmp>
+                
+            </xmp>
+
+            <li></li>
+            <xmp>
+                
+            </xmp>
+
+            <li></li>
+            <xmp>
+                
+            </xmp>
+
+            <li></li>
+            <xmp>
+                
             </xmp>
 
             <li></li>

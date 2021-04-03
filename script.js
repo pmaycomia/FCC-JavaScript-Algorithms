@@ -49,12 +49,7 @@ function largestOfFour(arr) {
 }
 
 function confirmEnding(str, target) {
-    if(str[str.length - 1] === target) {
-        console.log("true");
-        return true
-      } else {
-        return false
-      }
+    return str[str.length - 1] === target ? true : false;    
 }
 
 function repeatStringNumTimes(str, num) {
@@ -65,7 +60,17 @@ function repeatStringNumTimes(str, num) {
     }                    
     return(newStr)
 }
+
+function truncateString(str, num) {
+    return str.length > num ? str.slice(0, num) + "..." : str;
+}
   
+function findElement(arr, func) {
+    let num = 0;
+    let newArr = arr.map(func);
+  
+    return newArr[newArr.indexOf(true)];
+}
 
   
   
