@@ -72,6 +72,47 @@ function findElement(arr, func) {
     return newArr[newArr.indexOf(true)];
 }
 
+function findElement(arr, func) {
+    let newArr = arr.map(func);
+    let res = 0;
+    
+    if(newArr.includes(true)) {
+      res = newArr.indexOf(true);
+      return arr[res];
+    }      
+} 
+
+function booWho(bool) {
+    return typeof bool === "boolean" ? true : false
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function uniteUnique(...arr) {
+    let newArr = [];
+    
+    for (let n = 0; n < arr.length; n++) {
+      for (let m = 0; m < arr[n].length; m++) {
+        if (!newArr.includes(arr[n][m])) {
+          newArr.push(arr[n][m])
+        }
+      }
+    }
   
+    return newArr;
+}
+  
+
   
   

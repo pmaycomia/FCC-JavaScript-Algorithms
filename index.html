@@ -110,45 +110,49 @@
             <li>Finders Keepers</li>
             <xmp>
                 function findElement(arr, func) {
-                    let num = 0;
                     let newArr = arr.map(func);
-                  
-                    return newArr[newArr.indexOf(true)];
-
-                
+                    let res = 0;
+                    
+                    if(newArr.includes(true)) {
+                      res = newArr.indexOf(true);
+                      return arr[res];
+                    }      
+                }       
             </xmp>
 
-            <li></li>
+            <li>Boo who</li>
+            <xmp>
+                function booWho(bool) {
+                    return typeof bool === "boolean" ? true : false
+                }
+            </xmp>
+
+            <li>Title Case a Sentence</li>
             <xmp>
                 
             </xmp>
 
-            <li></li>
+            <li>Slice and Splice</li>
             <xmp>
                 
             </xmp>
 
-            <li></li>
+            <li>Falsy Bouncer</li>
             <xmp>
                 
             </xmp>
 
-            <li></li>
+            <li>Where do I Belong</li>
             <xmp>
                 
             </xmp>
 
-            <li></li>
+            <li>Mutations</li>
             <xmp>
                 
             </xmp>
 
-            <li></li>
-            <xmp>
-                
-            </xmp>
-
-            <li></li>
+            <li>Chunky Monkey</li>
             <xmp>
                 
             </xmp>
@@ -160,10 +164,161 @@
     <div>
         <h3>Intermediate Algorithm Scripting</h3>
     </div>
+        <ol>    
+            <li>Sum All Numbers in a Range</li>
+            <xmp>
+                
+            </xmp>
 
+            <li>Diff Two Arrays</li>
+            <xmp>
+                
+            </xmp>
+
+            <li>Seek and Destroy</li>
+            <xmp>
+                
+            </xmp>
+
+            <li>Wherefore art thou</li>
+            <xmp>
+                
+            </xmp>
+
+            <li>Spinal Tap Case</li>
+            <xmp>
+                
+            </xmp>
+
+            <li>Pig Latin</li>
+            <xmp>
+                
+            </xmp>
+
+            <li>Search and Replace</li>
+            <xmp>
+                
+            </xmp>
+
+            <li>DNA Pairing</li>
+            <xmp>
+                
+            </xmp>
+
+            <li>Missing Letters</li>
+            <xmp>
+                
+            </xmp>
+
+            <li>Sorted Union</li>
+            <xmp>
+                function uniteUnique(...arr) {
+                    let newArr = [];
+                    
+                    for (let n = 0; n < arr.length; n++) {
+                      for (let m = 0; m < arr[n].length; m++) {
+                        if (!newArr.includes(arr[n][m])) {
+                          newArr.push(arr[n][m])
+                        }
+                      }
+                    }
+                  
+                    return newArr;
+                }              
+            </xmp>
+
+            <li>Convert HTML Entities</li>
+            <xmp>
+                
+            </xmp>
+
+            <li>Sum All Odd Fibonacci Numbers</li>
+            <xmp>
+                function sumFibs(num) {
+                    return num;
+                  }
+                  
+                sumFibs(4);
+            </xmp>
+            <h2>recursion maybe?</h2>
+
+            <li>Sum All Primes</li>
+            <xmp>
+                
+            </xmp>
+
+            <li>Smallest Common Multiple</li>
+            <xmp>
+                
+            </xmp>
+
+            <li>Drop it</li>
+            <xmp>
+                
+            </xmp>
+
+            <li>Streamroller</li>
+            <xmp>
+                
+            </xmp>
+
+            <li>Binary Agents</li>
+            <xmp>
+                
+            </xmp>
+
+            <li>Everything Be True</li>
+            <xmp>
+                
+            </xmp>
+
+            <li>Arguments Optional</li>
+            <xmp>
+                
+            </xmp>
+
+            <li>Make a Person</li>
+            <xmp>
+                
+            </xmp>
+
+            <li>Map the Debris</li>
+            <xmp>
+                
+            </xmp>
+
+            
+        </ol>
     <a id=Projects></a>
     <div>
         <h3>Algorithms and Data Structures Projects</h3>
+        <ol>
+            <li>Palindrome Checker/li>
+            <xmp>
+                
+            </xmp>
+
+            <li>Roman Numeral Converter</li>
+            <xmp>
+                
+            </xmp>
+
+            <li>Caesars Cipher</li>
+            <xmp>
+                
+            </xmp>
+
+            <li>Telephone Number Validator</li>
+            <xmp>
+                
+            </xmp>
+
+            <li>Cash Register</li>
+            <xmp>
+                
+            </xmp>
+
+        </ol>
     </div>
 
     <script src="script.js"></script>
