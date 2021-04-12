@@ -112,6 +112,35 @@ function bouncer(arr) {
     return newArr;
 }
 
+function getIndexToIns(arr, num) {
+    let newArr = arr.concat(num).sort(function(a, b){return a-b});
+    
+    return newArr.indexOf(num);
+}
+
+function mutation(arr) {
+
+    let newArr = [];
+    for(let i = 0; i < arr[1].length; i++) {
+      if (arr[0].toLowerCase().includes(arr[1][i].toLowerCase())){
+        newArr.push("true");
+      } else {
+        newArr.push("false");
+      }    
+    }
+  
+    return newArr.includes("false") ? false : true;    
+}
+
+function chunkArrayInGroups(arr, size) {
+  let newArr = [];
+
+  while (arr.length > 0) {
+    newArr.push(arr.splice(0, size));                      
+  }                  
+  return newArr;
+}
+
 
 
 
