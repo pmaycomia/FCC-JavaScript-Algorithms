@@ -86,7 +86,31 @@ function booWho(bool) {
     return typeof bool === "boolean" ? true : false
 }
 
+function titleCase(str) {
+    let newArr = str.toLowerCase().split(" ");
 
+    for (let i = 0; i < newArr.length; i++) {
+      newArr[i] = newArr[i].charAt(0).toUpperCase() + newArr[i].substring(1);
+    }
+    return newArr.join(" ");
+}
+
+function frankenSplice(arr1, arr2, n) {
+    let copyArr2 = [...arr2];
+    let head = copyArr2.slice(0, n);
+    let spliced = copyArr2.splice(n);
+    let body = arr1.concat(spliced);
+        
+    return head.concat(body);
+}
+
+function bouncer(arr) {
+    let newArr  = [];
+    
+    arr.map(obj => Boolean(obj) ? newArr.push(obj) : console.log(arr.indexOf(obj)))
+  
+    return newArr;
+}
 
 
 
