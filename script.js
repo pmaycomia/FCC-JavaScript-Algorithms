@@ -141,6 +141,25 @@ function chunkArrayInGroups(arr, size) {
   return newArr;
 }
 
+function sumAll(arr) {
+  let sortAsc = function(a, b){return a-b};
+  let reducer = function(acc, cval) {return acc + cval};
+  let newArr = arr.sort(sortAsc);
+
+  for (let i = arr[0]; i < arr[1]; i++){
+    if (i !== arr[0]) newArr.push(i);      
+  }  
+  return newArr.sort(sortAsc).reduce(reducer);
+}
+
+function diffArray(arr1, arr2) {
+  var newArr = [];
+  return newArr;
+}
+
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+
+
 
 
 
