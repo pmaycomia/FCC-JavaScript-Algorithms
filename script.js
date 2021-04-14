@@ -220,7 +220,32 @@ function uniteUnique(...arr) {
   
     return newArr;
 }
-  
 
+
+
+
+
+
+  
+function rot13(str) {
+  let newArr = [];
+  let arrOfStr = str.split(" ")
+  let newArrOfStr = ""
+  
+  for (let i = 0; i < arrOfStr.length; i++) {
+    for (let j = 0; j < arrOfStr[i].length; j++) {
+      console.log(String.fromCharCode(arrOfStr[i].charCodeAt(j) - 13), arrOfStr[i].charCodeAt(j))
+      String.fromCharCode(arrOfStr[i].charCodeAt(j) - 13);
+    }
+
+  }
+  console.log(arrOfStr)
+  //if char is < 60?? plus 13!!
+ // console.log(String.fromCharCode(13))
+  //console.log(str.charCodeAt(0))
+  return str;
+}
+
+rot13("SERR PBQR PNZC");
   
   
