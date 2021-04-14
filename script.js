@@ -153,11 +153,47 @@ function sumAll(arr) {
 }
 
 function diffArray(arr1, arr2) {
-  var newArr = [];
+  var a = [];
+  var b = [];
+  let newArr = [];
+
+  if (arr1.length === 0) return arr2;
+  if (arr2.length === 0) return arr1;
+  
+ for (let i of arr2) {
+    a = arr1.filter(item => !arr2.includes(item));   
+  }
+
+   for (let j of arr1) {
+    b = arr2.filter(item => !arr1.includes(item));   
+  }
+
+  newArr = a.concat(b);
   return newArr;
 }
 
-diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+function destroyer(...arr) {
+  let mainArr = arr[0];
+  let toRemove = arr.slice(1)
+  return mainArr.filter(item => !toRemove.includes(item));
+}
+
+function whatIsInAName(collection, source) {
+  var arr = [];
+  var keys = Object.keys(source);
+
+  arr = collection.filter(function(object) {
+      for (let i = 0; i < keys.length; i++) {
+        if (!object.hasOwnProperty(keys[i]) ||
+            object[keys[i]] !== source[keys[i]]) {
+              return false;
+            }                    
+        }
+        return true;
+      });
+  return arr;
+}
+
 
 
 
