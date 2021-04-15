@@ -230,22 +230,34 @@ function uniteUnique(...arr) {
 function rot13(str) {
   let newArr = [];
   let arrOfStr = str.split(" ")
-  let newArrOfStr = ""
-  
-  for (let i = 0; i < arrOfStr.length; i++) {
-    for (let j = 0; j < arrOfStr[i].length; j++) {
-      console.log(String.fromCharCode(arrOfStr[i].charCodeAt(j) - 13), arrOfStr[i].charCodeAt(j))
-      String.fromCharCode(arrOfStr[i].charCodeAt(j) - 13);
-    }
+  let newArrOfStr = []
+  let temp = ""
+  let wordHolder = ""
+
+                  
+  for (let i = 0; i < arrOfStr.length; i++) {    
+
+      for (let j = 0; j < arrOfStr[i].length; j++) {        
+        newArr.pop()
+          if(arrOfStr[i].charCodeAt(j) < 78 && arrOfStr[i].charCodeAt(j) > 64) {             
+            temp = String.fromCharCode(arrOfStr[i].charCodeAt(j) + 13)
+          } else if (arrOfStr[i].charCodeAt(j) > 77 && arrOfStr[i].charCodeAt(j) < 91) {
+            temp = String.fromCharCode(arrOfStr[i].charCodeAt(j) - 13)                         
+          } else {              
+            temp = arrOfStr[i][j]
+          }
+
+          newArrOfStr.push(temp) 
+               
+        }
+        newArrOfStr.push(" ")
+        wordHolder = newArrOfStr.join("")
+        newArr.push(wordHolder)   
 
   }
-  console.log(arrOfStr)
-  //if char is < 60?? plus 13!!
- // console.log(String.fromCharCode(13))
-  //console.log(str.charCodeAt(0))
-  return str;
-}
 
-rot13("SERR PBQR PNZC");
+      console.log(newArr.toString())
+     return newArr.toString();
+}
   
   
