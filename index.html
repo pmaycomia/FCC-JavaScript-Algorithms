@@ -259,7 +259,7 @@
             </xmp>
 
             <li>Wherefore art thou</li>
-            <xmp>
+            <xmp style="background-color: brown;">
                 function whatIsInAName(collection, source) {
                     var arr = [];
                     var keys = Object.keys(source);
@@ -274,13 +274,36 @@
                           return true;
                         });
                     return arr;
-                  }                          
+                }                          
             </xmp>
 
             <li>Spinal Tap Case</li>
+                <ul>
+                    <li> Plan is to use regular expressions to split the string apart, then turn everything to lowercase, then add the dashes in between when joining them back.</li>
+                    <li>Faced a problem with capital letters - the <em>split</em> function removes the letter. What to do? </li>
+                    <li>Discovered <em> positive lookahead</em> to keep the capital letters.</li>
+                    <li>Can't use <em>toLowerCase()</em> after splitting the string? Whyyyy?</li>
+                    <li>Oh yeah, strings turn to an array when you split them. So join the words first, then turn everything to lower case. </li>
+                </ul>
+
             <xmp>
+                function spinalCase(str) {
+                    let regex = /\s|_|-|(?=[A-Z])/g;
+                    
+                    return str.split(regex).join("-").toLowerCase()
+                }
+
                 
             </xmp>
+                <xmp> 
+                    //PASTE THESE IN CONSOLE TO CHECK OUT THE ANSWERS!!!
+                    
+                    spinalCase('This Is Spinal Tap');
+                    spinalCase("thisIsSpinalTap");
+                    spinalCase("The_Andy_Griffith_Show");
+                    spinalCase("Teletubbies say Eh-oh");
+                    spinalCase("AllThe-small Things");
+                </xmp>
 
             <li>Pig Latin</li>
             <xmp>

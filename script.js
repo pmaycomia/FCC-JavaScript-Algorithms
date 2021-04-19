@@ -194,6 +194,12 @@ function whatIsInAName(collection, source) {
   return arr;
 }
 
+function spinalCase(str) {
+  let regex = /\s|_|-|(?=[A-Z])/g;
+  
+  return str.split(regex).join("-").toLowerCase()
+}
+
 
 
 
