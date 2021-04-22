@@ -308,7 +308,27 @@
             <div class="pig-latin">
                 <li>Pig Latin</li>
                 <xmp>
-                    
+                    function translatePigLatin(str) {
+                        let vowels = /a|e|i|o|u/i;
+                        let holder;
+                      
+                        if (str[0].match(vowels)) {
+                          return str.concat('way');
+                        } else if (!str[0].match(vowels)) {
+                          holder = str.split(/[a|e|i|o|u].?/i);
+                          return holder[0], str.substring(holder[0].length) + holder[0] + "ay";
+                        }
+                    }
+                </xmp>
+
+                <xmp>                                        
+                    translatePigLatin("consonant");
+                    translatePigLatin("california");
+                    translatePigLatin("paragraphs");
+                    translatePigLatin("glove");
+                    translatePigLatin("eight");
+                    translatePigLatin("schwartz");
+                    translatePigLatin("schwartz");
                 </xmp>
 
 

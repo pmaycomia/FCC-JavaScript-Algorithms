@@ -201,6 +201,28 @@ function spinalCase(str) {
 }
 
 
+function translatePigLatin(str) {
+  let vowels = /a|e|i|o|u/i;
+  let holder;
+
+  if (str[0].match(vowels)) {
+    return str.concat('way');
+  } else if (!str[0].match(vowels)) {
+    holder = str.split(/[a|e|i|o|u].?/i);
+    return holder[0], str.substring(holder[0].length) + holder[0] + "ay";
+  }
+}
+
+
+function myReplace(str, before, after) {
+  if (before[0] !== before[0].toLowerCase()) {
+    console.log(str.replace(before, after[0].toUpperCase() + after.substring(1)));
+  } else if (before[0] !== before[0].toUpperCase()) {
+    return str.replace(before, after[0].toLowerCase() + after.substring(1));
+  }                  
+  return str.replace(before, after);
+}
+
 
 
 
