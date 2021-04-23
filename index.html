@@ -385,11 +385,37 @@
                 </xmp>
             </div>
 
+            <div class="missing-letters">
+                <li>Missing Letters</li>
+                    <ul>
+                        <li>I was planning to create an alphabet object, I tried it for the first example but it's too complicated. So I thought I'll just use <em>fromCharCode and charCodeAt</em>. I'm not so familiar with these methods so I was a little scared to use them but I realized in the end that they aren't actually that had to use. </li>
+                        <li>First, I played with the characters in the console. charCodeAt returns the code of the characters, and you'll find the anomally if the character code jumped more than 1.</li>
+                        <li>I made an <em>if</em> statement with an argument of "If charcodeat[n] minus charcodeat(first char) is not equal to 1, then that is the anomally.</li>
+                        <li>Then I put the if statement in a loop!</li>
+                        <li>If argument is true, we return the character from  last element minus 1.</li>
+                    </ul>
+                <xmp>
+                    function fearNotLetter(str) {
 
-            <li>Missing Letters</li>
-            <xmp>
-                
-            </xmp>
+                        let base = str.charCodeAt(0);
+                      
+                        for (let i = 1; i < str.length; i++) {
+                          if(str.charCodeAt(i) - base !== i) {     
+                            return String.fromCharCode(str.charCodeAt(i) - 1);
+                          }    
+                        }
+                    }
+                </xmp>
+                <xmp>                    
+                    fearNotLetter("abce");
+                    fearNotLetter("abcdefghjklmno");
+                    fearNotLetter("stvwx");
+                    fearNotLetter("stvwx");
+                    fearNotLetter("bcdf");
+                    fearNotLetter("abcdefghijklmnopqrstuvwxyz");
+                </xmp>
+            </div>
+            
 
             <li>Sorted Union</li>
             <xmp>

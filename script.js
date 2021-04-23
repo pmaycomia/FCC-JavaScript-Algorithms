@@ -239,6 +239,17 @@ function pairElement(str) {
   return newArr;
 }
 
+function fearNotLetter(str) {
+
+  let base = str.charCodeAt(0);
+
+  for (let i = 1; i < str.length; i++) {
+    if(str.charCodeAt(i) - base !== i) {     
+      return String.fromCharCode(str.charCodeAt(i) - 1);
+    }    
+  }
+}
+
 
 
 
