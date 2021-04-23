@@ -250,18 +250,6 @@ function fearNotLetter(str) {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 function uniteUnique(...arr) {
     let newArr = [];
     
@@ -275,6 +263,24 @@ function uniteUnique(...arr) {
   
     return newArr;
 }
+
+function convertHTML(str) {
+  let entities = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    "\"": "&quot;",
+    "'": "&apos;"
+  };
+  
+  return str.replace(/([&<>\"'])/g, char => entities[char]);                        
+}
+
+
+
+
+
+
 
 
 

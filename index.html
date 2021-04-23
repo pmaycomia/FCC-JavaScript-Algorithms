@@ -416,28 +416,65 @@
                 </xmp>
             </div>
             
-
-            <li>Sorted Union</li>
-            <xmp>
-                function uniteUnique(...arr) {
-                    let newArr = [];
-                    
-                    for (let n = 0; n < arr.length; n++) {
-                      for (let m = 0; m < arr[n].length; m++) {
-                        if (!newArr.includes(arr[n][m])) {
-                          newArr.push(arr[n][m])
+            <div class="sorted-union">
+                <li>Sorted Union</li>
+                <xmp>
+                    function uniteUnique(...arr) {
+                        let newArr = [];
+                        
+                        for (let n = 0; n < arr.length; n++) {
+                          for (let m = 0; m < arr[n].length; m++) {
+                            if (!newArr.includes(arr[n][m])) {
+                              newArr.push(arr[n][m])
+                            }
+                          }
                         }
-                      }
-                    }
-                  
-                    return newArr;
-                }              
-            </xmp>
-
-            <li>Convert HTML Entities</li>
-            <xmp>
+                      
+                        return newArr;
+                    }              
+                </xmp>
                 
-            </xmp>
+                <xmp>
+                    uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+                    uniteUnique([1, 2, 3], [5, 2, 1]);
+                    uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]);
+                </xmp>
+            </div>
+
+
+
+            <div class="convert-html">
+                <li>Convert HTML Entities</li>
+                    <ul>
+                        <li>First, I created an object with all the HTML entities.</li>
+                        <li>I tried a for loop to check if the character of the string matches any entity in the object, but as soon as it gets the first match, it stops and the second special character won't be matched and replaced.</li>
+                        <li>It took me an hour to solve this algotrithm and that is because I didn't know we can create function as the second argument of replace, as soon as you know that, this would be easy.</li>
+                    </ul>
+                <xmp>
+                    function convertHTML(str) {
+                        let entities = {
+                          "&": "&amp;",
+                          "<": "&lt;",
+                          ">": "&gt;",
+                          "\"": "&quot;",
+                          "'": "&apos;"
+                        };
+                        
+                        return str.replace(/([&<>\"'])/g, char => entities[char]);                        
+                    }
+                </xmp>
+                <xmp>                    
+                    convertHTML("Dolce & Gabbana");
+                    convertHTML("Hamburgers < Pizza < Tacos");
+                    convertHTML("Sixty > twelve");
+                    convertHTML('Stuff in "quotation marks"');
+                    convertHTML("Schindler's List");
+                    convertHTML("<>");
+                    convertHTML("abc");
+                </xmp>
+            </div>
+
+
 
             <li>Sum All Odd Fibonacci Numbers</li>
             <xmp>
