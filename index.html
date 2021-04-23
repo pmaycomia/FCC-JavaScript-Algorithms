@@ -352,11 +352,39 @@
                 myReplace("Let us get back to more Coding", "Coding", "algorithms");
                 myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
             </xmp>
+            <div class="dna-pairing">
+                <li>DNA Pairing</li>
+                    <ul>
+                        <li>I created the DNA object.</li>
+                        <li>I did some test on the console first, I was wondering how I could access the objects. dna[0] gives undefined. So I tried putting the each letter and they work fine.</li>
+                        <li>Then I thought this would be easy. A <em>for loop</em> would do the job.</li>
+                        <li>Using the <em>push</em> method, the elements just placed them in one single array. By adding brackets [] in between the elements, push automatically added them as an array in an array. </li>
+                    </ul>
+                <xmp>
+                    function pairElement(str) {
+                        let dna = {
+                          'G': 'C',
+                          'C': 'G',
+                          'A': 'T',
+                          'T': 'A'
+                        }
+                      
+                        let newArr = [];
+                        for (let i = 0; i < str.length; i++) {
+                          newArr.push([str[i], dna[str[i]]])    
+                        }
+                        
+                        return newArr;
+                    }
+                </xmp>
+                <xmp>
+                    pairElement("GCG");
+                    pairElement("ATCGA");
+                    pairElement("TTGAG");
+                    pairElement("CTCTA");
+                </xmp>
+            </div>
 
-            <li>DNA Pairing</li>
-            <xmp>
-                
-            </xmp>
 
             <li>Missing Letters</li>
             <xmp>

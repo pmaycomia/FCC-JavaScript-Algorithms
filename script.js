@@ -223,6 +223,22 @@ function myReplace(str, before, after) {
   return str.replace(before, after);
 }
 
+function pairElement(str) {
+  let dna = {
+    'G': 'C',
+    'C': 'G',
+    'A': 'T',
+    'T': 'A'
+  }
+
+  let newArr = [];
+  for (let i = 0; i < str.length; i++) {
+    newArr.push([str[i], dna[str[i]]])    
+  }
+  
+  return newArr;
+}
+
 
 
 
