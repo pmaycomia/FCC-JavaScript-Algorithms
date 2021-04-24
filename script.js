@@ -317,8 +317,12 @@ function rot13(str) {
 
   }
 
-      console.log(newArr.toString())
-     return newArr.toString();
+  console.log(newArr.toString().trim())
+  return newArr.toString().trim();
 }
   
-  
+    
+rot13("SERR PBQR PNZC")
+rot13("SERR CVMMN!")
+rot13("SERR YBIR?")
+rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.")
