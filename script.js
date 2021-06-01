@@ -294,6 +294,22 @@ function steamrollArray(arr) {
     return thirdHolder;
 }
 
+function binaryAgent(str) {
+
+    let newArr = str.split(" ");
+    let newStr = "";
+    let char = "";
+    let result = [];
+
+    for (let elem of newArr) {
+        let binaryToDigit = parseInt(elem, 2);
+        char = newStr.concat("", String.fromCharCode(binaryToDigit));
+        result.push(char);
+    }
+
+    return result.join('');
+}
+
 
 
 
