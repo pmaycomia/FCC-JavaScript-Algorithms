@@ -326,7 +326,35 @@ function truthCheck(collection, pre) {
     else return false;
 }
 
-
+var Person = function(firstAndLast) {              
+    let fullName = firstAndLast;
+  
+    this.getFullName = function() {
+      return fullName
+    };
+  
+    this.getFirstName = function() {
+      return fullName.split(" ")[0]
+    }
+  
+    this.getLastName = function() {
+      return fullName.split(" ")[1]
+    }              
+  
+    this.setFirstName = function (first) {
+      fullName = first + " " + fullName.split(" ")[1];
+    }
+  
+    this.setLastName = function (last) {
+      fullName = fullName.split(" ")[0] + " " + last;
+    }
+  
+    this.setFullName = function (full) {
+      return fullName = full;
+    }
+  
+    return firstAndLast;                
+  };
 
 
 
