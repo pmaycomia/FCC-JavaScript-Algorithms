@@ -24,23 +24,46 @@
         <ol>
             <li>Convert Celsius to Fahrenheit</li>
             <xmp>
-                function convertToF(celsius) { let fahrenheit = (celsius * 9 / 5) + 32; return fahrenheit; }
+                function convertToF(celsius) { 
+                    let fahrenheit = (celsius * 9 / 5) + 32;
+                    return fahrenheit;
+                }
             </xmp>
 
             <li>Reverse a String</li>
             <xmp>
-                function reverseString(str) { let newStr = []; newStr = str.split("").reverse().join(""); return newStr; }
+                function reverseString(str) {
+                    let newStr = [];
+                    newStr = str.split("").reverse().join(""); 
+                    return newStr; 
+                }
             </xmp>
 
             <li>Factorialize a Number</li>
             <xmp>
-                function factorialize(num) { if (num
-                <=0 ) { return 1; } return num * factorialize(num - 1); } </xmp>
+                function factorialize(num) {
+                    if (num <=0 ) {
+                         return 1; 
+                    }
+                    return num * factorialize(num - 1); 
+                } 
+                </xmp>
 
-                    <li>Find the Longest Word in a String</li>
-                    <xmp>
-                        function findLongestWordLength(str) { let newArr = str.split(" "); let result = 0; for (let string of newArr) { if (string.length > result) { result = string.length; } }; return result; } }
-                    </xmp>
+            <li>Find the Longest Word in a String</li>
+            <xmp>
+                function findLongestWordLength(str) { 
+                    let newArr = str.split(" "); 
+                    let result = 0; 
+                    
+                    for (let string of newArr) {
+                         if (string.length > result) {
+                              result = string.length;
+                            }
+                        };
+                        
+                    return result; 
+                }
+            </xmp>            
 
                     <li>Return Largest Numbers in Arrays</li>
                     <xmp>
@@ -282,7 +305,8 @@
                         <p>convert binary to decimal then convert to ascii using fromCharCode</p>
                         <xmp>
                             function binaryAgent(str) { let newArr = str.split(" "); let newStr = ""; let char= ""; let result = []; for (let elem of newArr) { let binaryToDigit = parseInt(elem, 2); char = newStr.concat("", String.fromCharCode(binaryToDigit)); result.push(char);
-                            } return result.join(''); }
+                            } return result.join(''); 
+                        }
 
                         </xmp>
 
@@ -294,8 +318,7 @@
                         <li>Everything Be True</li>
                         <xmp>
                             function truthCheck(collection, pre) { let checker = 0; for (let i = 0; i
-                            < collection.length; i++) { let selection=c ollection[i][pre]; if(selection) { console.log(selection, 'true'); checker=0 ; } else if (selection===u ndefined)
-                                { checker +=1 ; } else { //console.log(selection, 'false'); checker +=1 ; } } //console.log(checker) //console.log(collection[1][pre]) if (checker===0 ) { return true; }else{ return false; } } </xmp>
+                            < collection.length; i++) { let selection=c ollection[i][pre]; if(!selection) checker +=1; else checker +=0 ; } if (checker===0 ) return true; else return false; } </xmp>
 
                                 <li>Arguments Optional</li>
                                 <xmp>

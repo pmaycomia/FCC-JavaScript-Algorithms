@@ -311,6 +311,20 @@ function binaryAgent(str) {
 }
 
 
+function truthCheck(collection, pre) {
+
+    let checker = 0;
+
+    for (let i = 0; i < collection.length; i++) {
+        let selection = collection[i][pre];
+
+        if (!selection) checker += 1;
+        else checker += 0;
+    }
+
+    if (checker === 0) return true;
+    else return false;
+}
 
 
 
